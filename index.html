@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>교토 여행 가이드 - 완벽한 3일 일정</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            padding: 60px 20px;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1200&q=80') center/cover;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        header p {
+            font-size: 1.3em;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .section {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .section h2 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
+        }
+
+        .section h3 {
+            color: #764ba2;
+            font-size: 1.8em;
+            margin: 30px 0 20px 0;
+        }
+
+        .timetable {
+            display: grid;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .time-block {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .time-block:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .time {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .activity {
+            font-size: 1.1em;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .activity-details {
+            color: #666;
+            margin-top: 8px;
+            font-size: 0.95em;
+        }
+
+        .transport-info {
+            background: #fff3cd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 5px solid #ffc107;
+        }
+
+        .transport-info strong {
+            color: #856404;
+        }
+
+        .restaurant {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 5px solid #dc3545;
+        }
+
+        .restaurant h4 {
+            color: #dc3545;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .restaurant-info {
+            margin: 10px 0;
+            color: #666;
+        }
+
+        .restaurant-info strong {
+            color: #333;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            height: 250px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+        }
+
+        .day-badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .tip-box {
+            background: #d1ecf1;
+            border-left: 5px solid #0c5460;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .tip-box strong {
+            color: #0c5460;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .section {
+                padding: 20px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌸 교토 여행 가이드 🌸</h1>
+            <p>전통과 현대가 만나는 아름다운 도시</p>
+        </header>
+
+        <!-- 교통수단 안내 -->
+        <section class="section">
+            <h2>🚌 교통수단 안내</h2>
+            <div class="transport-info">
+                <strong>오사카에서 교토로 이동:</strong>
+                <ul style="margin: 10px 0 0 20px;">
+                    <li><strong>JR 도카이도 신칸센:</strong> 오사카역 → 교토역 (약 15분, 1,420엔)</li>
+                    <li><strong>JR 특급 열차:</strong> 오사카역 → 교토역 (약 30분, 560엔) - 가장 경제적</li>
+                    <li><strong>한큐 전철:</strong> 우메다역 → 가와라마치역 (약 45분, 400엔)</li>
+                </ul>
+            </div>
+            <div class="transport-info">
+                <strong>교토 시내 이동:</strong>
+                <ul style="margin: 10px 0 0 20px;">
+                    <li><strong>교토 버스 일일권:</strong> 600엔 (하루 무제한 버스 이용 가능, 추천!)</li>
+                    <li><strong>교토 지하철 + 버스 일일권:</strong> 900엔</li>
+                    <li><strong>교토 시영 버스:</strong> 1회 230엔</li>
+                    <li><strong>택시:</strong> 초기 요금 660엔 (2km), 이후 410엔/km</li>
+                </ul>
+            </div>
+            <div class="tip-box">
+                <strong>💡 팁:</strong> 교토 버스 일일권을 구매하시면 시내 주요 관광지를 모두 편리하게 다닐 수 있습니다. 교토역이나 지하철역, 주요 호텔에서 구매 가능합니다.
+            </div>
+        </section>
+
+        <!-- 1일차 일정 -->
+        <section class="section">
+            <span class="day-badge">1일차</span>
+            <h2>전통 문화 체험의 날</h2>
+            <div class="timetable">
+                <div class="time-block">
+                    <div class="time">09:00 - 10:00</div>
+                    <div class="activity">🍜 아침 식사: 키요미즈데라 근처 카페</div>
+                    <div class="activity-details">교토역에서 시내버스 206번 타고 키요미즈고조까지 (약 20분)</div>
+                </div>
+                <div class="time-block">
+                    <div class="time">10:00 - 12:00</div>
+                    <div class="activity">⛩ 키요미즈데라 (清水寺) 방문</div>
+                    <div class="activity-details">입장료: 400엔 | 세계문화유산, 벚꽃과 단풍 명소</div>
+                </div>
+                <div class="time-block">
+                    <div class="time">12:00 - 13:30</div>
+                    <div class="activity">🍽 점심: 산넨자카/니넨자카 거리 산책 및 식사</div>
+                    <div class="activity-details">전통 기와집 거리, 각종 기념품 쇼핑</div>
+                </div>
+                <div class="time-block">
+                    <div class="time">13:30 - 15:30</div>
+                    <div class="activity">🏯 후시미이나리 신사 (伏見稲荷大社) 방문</div>
+                    <div class="activity-details">버스로 이동 후 JR 나라선 타고 이나리역까지 (약 15분) | 무료 입장, 만개의 빨간 토리이</div>
+                </div>
+                <div class="time-block">
+                    <div class="time">15:30 - 17:00</div>
+                    <div class="activity">🛍 기온마치 (祇園) 거리 산책</div>
+                    <div class="activity-details">전통 마이코 분위기, 전통 건축물 감상</div>
+                </div>
+                <div class="time-block">
+                    <div class="time">17:00 - 18:30</div>
+                    <div class="activity">🍱 저녁: 기온마치 근처 레스토랑</div>
+                </div>
+                <div class="time-block">
+                    <div class="time">18:30 - 20:00</div>
+                    <div class="activity">🌙 야경: 기온마치 야사카 신사 야경</div>
+                    <div class="activity-details">야간 조명으로 아름다운 전통 건축물 감상</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2일차 일정 -->
+        <section class="section">
+            <span class="day-badge">2일차</span>
+            <h2>금각사와 아라시야마 탐험</h2>
+            <div class="timetable">
+                <div class="time-block">
+                    <div class="time">08:30 - 09:30</div>
+                    <div class="activity">🍳 아침: 호텔 근처 조식</div>
+                </div>
+                <div class="time-block">
+                    <div class="time">09:30 - 11:00</div>
+                    <div class="activity">🏛 금각사 (金閣寺) 방문</div>
+                    <div class="activity-details">버스 205번 또는 지하철 카미오지역에서 버스 | 입장료: 400엔 | 교토의 대표 사원</div>
+                </div>
+                <div class="time-block">
+                    <div class="time">11:00 - 12:00</div>
+                    <div class="activity">🏯 료안지 (龍安寺) 방문</div>
+                    <div class="activity-details">금각사에서 도보 20분 | 입장료: 500엔 | 석정으로 유명한 선사 사원</div>
+                </div>
+                <div class="time-block">
+                    <div class="time">12:00 - 13:30</div>
+                    <div class="activity">🍜 점심: 아라시야마로 이동하며 식사</div>
+                    <div class="activity-details">JR 산인본선 사가아라시야마역 또는 한큐 아라시야마역 (약 20분)</div>
+                </div>
+                <div class="time-block">
+                    <div class="time">13:30 - 15:30</div>
+                    <div class="activity">🎋 아라시야마 대나무 숲 산책</div>
+                    <div class="activity-details">무료 | 사진 촬영 명소, 평화로운 분위기</div>
+                </div>
+                <div class="time-block">
+                    <div class="time">15:30 - 17:00</div>
+                    <div class="activity">⛰ 테노류지 (天龍寺) 방문</div>
+                    <div class="activity-details">입장료: 500엔 (정원만) | 아름다운 정원</div>
+                </div>
+                <div class="time-block">
+                    <div class="time">17:00 - 18:30</div>
+                    <div class="activity">🛍 아라시야마 거리 쇼핑</div>
+                    <div class="activity-details">전통 기념품, 지역 특산품 구매</div>
+                </div>
+                <div class="time-block">
+                    <div class="time">18:30 - 20:00</div>
+                    <div class="activity">🍱 저녁: 아라시야마 근처 레스토랑</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3일차 일정 -->
+        <section class="section">
+            <span class="day-badge">3일차</span>
+            <h2>교토역 근처와 쇼핑</h2>
+            <div class="timetable">
+                <div class="time-block">
+                    <div class="time">09:00 - 10:00</div>
+                    <div class="activity">🍳 아침: 교토역 근처 조식</div>
+                </div>
+                <div class="time-block">
+                    <div class="time">10:00 - 12:00</div>
+                    <div class="activity">🏯 도지 (東寺) 방문</div>
+                    <div class="activity-details">교토역에서 도보 15분 | 입장료: 500엔 | 교토 최고의 오층탑</div>
+                </div>
+                <div class="time-block">
+                    <div class="time">12:00 - 13:30</div>
+                    <div class="activity">🍜 점심: 교토역 이스타 지하 식당가</div>
+                    <div class="activity-details">다양한 일본 요리 선택 가능</div>
+                </div>
+                <div class="time-block">
+                    <div class="time">13:30 - 16:00</div>
+                    <div class="activity">🛍 쇼핑: 교토역 근처</div>
+                    <div class="activity-details">교토 타워, 이온몰, 기념품 샵 투어</div>
+                </div>
+                <div class="time-block">
+                    <div class="time">16:00 - 17:30</div>
+                    <div class="activity">🍵 전통 차 체험 (선택사항)</div>
+                    <div class="activity-details">다도 체험 또는 녹차 디저트</div>
+                </div>
+                <div class="time-block">
+                    <div class="time">17:30 - 19:00</div>
+                    <div class="activity">🍱 저녁: 교토역 근처 레스토랑</div>
+                </div>
+                <div class="time-block">
+                    <div class="time">19:00 - 20:00</div>
+                    <div class="activity">🌃 교토역 야경 및 출발 준비</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 맛집 추천 -->
+        <section class="section">
+            <h2>🍽 교토 맛집 추천</h2>
+            
+            <div class="restaurant">
+                <h4>1. 키요미즈데라 근처 - 오카부 (おかぶ)</h4>
+                <div class="restaurant-info">
+                    <strong>📍 위치:</strong> 키요미즈고조 근처<br>
+                    <strong>🍜 추천 메뉴:</strong> 유바덴부 (유부 튀김), 전통 교토식 정식<br>
+                    <strong>💰 가격:</strong> 1,500-3,000엔<br>
+                    <strong>⭐ 특징:</strong> 전통 교토 요리, 현지인들에게 인기
+                </div>
+            </div>
+
+            <div class="restaurant">
+                <h4>2. 기온마치 - 요지야 (ようじや)</h4>
+                <div class="restaurant-info">
+                    <strong>📍 위치:</strong> 기온마치 한카이역 근처<br>
+                    <strong>🍜 추천 메뉴:</strong> 교토식 우동, 카이세키 요리<br>
+                    <strong>💰 가격:</strong> 2,000-5,000엔<br>
+                    <strong>⭐ 특징:</strong> 100년 이상의 전통, 정통 교토 요리
+                </div>
+            </div>
+
+            <div class="restaurant">
+                <h4>3. 아라시야마 - 아라시야마 요시무라 (嵐山 よしむら)</h4>
+                <div class="restaurant-info">
+                    <strong>📍 위치:</strong> 아라시야마 대나무 숲 근처<br>
+                    <strong>🍜 추천 메뉴:</strong> 유부 우동, 교토식 정식<br>
+                    <strong>💰 가격:</strong> 1,800-3,500엔<br>
+                    <strong>⭐ 특징:</strong> 아라시야마 전망 좋은 레스토랑
+                </div>
+            </div>
+
+            <div class="restaurant">
+                <h4>4. 교토역 - 이치란 (一蘭) 라멘</h4>
+                <div class="restaurant-info">
+                    <strong>📍 위치:</strong> 교토역 근처<br>
+                    <strong>🍜 추천 메뉴:</strong> 돈코츠 라멘<br>
+                    <strong>💰 가격:</strong> 890-1,290엔<br>
+                    <strong>⭐ 특징:</strong> 유명 체인점, 24시간 영업
+                </div>
+            </div>
+
+            <div class="restaurant">
+                <h4>5. 기온마치 - 니시키 마켓 (錦市場)</h4>
+                <div class="restaurant-info">
+                    <strong>📍 위치:</strong> 기온마치 근처<br>
+                    <strong>🍜 추천 메뉴:</strong> 각종 스트리트 푸드, 타코야키, 생선회<br>
+                    <strong>💰 가격:</strong> 500-2,000엔<br>
+                    <strong>⭐ 특징:</strong> 교토의 부엌, 다양한 일본 길거리 음식
+                </div>
+            </div>
+
+            <div class="restaurant">
+                <h4>6. 교토역 - 교토 라멘 키오쿠 (京都らーめん きをく)</h4>
+                <div class="restaurant-info">
+                    <strong>📍 위치:</strong> 교토역 근처<br>
+                    <strong>🍜 추천 메뉴:</strong> 교토식 라멘, 교자<br>
+                    <strong>💰 가격:</strong> 900-1,500엔<br>
+                    <strong>⭐ 특징:</strong> 현지인들이 추천하는 맛집
+                </div>
+            </div>
+        </section>
+
+        <!-- 교토 사진 갤러리 -->
+        <section class="section">
+            <h2>📸 교토 사진 갤러리</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80" alt="키요미즈데라">
+                    <div class="gallery-caption">키요미즈데라</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1493804714600-bb0e0c8b2b50?w=800&q=80" alt="후시미이나리 신사">
+                    <div class="gallery-caption">후시미이나리 신사 토리이</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1494500764479-0c8f2919a3d8?w=800&q=80" alt="금각사">
+                    <div class="gallery-caption">금각사</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="아라시야마 대나무 숲">
+                    <div class="gallery-caption">아라시야마 대나무 숲</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1518152006812-edab29b069ac?w=800&q=80" alt="기온마치">
+                    <div class="gallery-caption">기온마치 거리</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80" alt="교토 전통 거리">
+                    <div class="gallery-caption">산넨자카 거리</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 추가 팁 -->
+        <section class="section">
+            <h2>💡 교토 여행 필수 팁</h2>
+            <div class="tip-box">
+                <strong>1. 교토 버스 일일권 활용:</strong> 시내 주요 관광지를 모두 다닐 수 있어 가장 경제적입니다.
+            </div>
+            <div class="tip-box">
+                <strong>2. 조기 출발:</strong> 인기 관광지는 오전에 방문하면 혼잡을 피할 수 있습니다.
+            </div>
+            <div class="tip-box">
+                <strong>3. 편한 신발:</strong> 많은 사원과 신사가 언덕에 있어 편한 신발이 필수입니다.
+            </div>
+            <div class="tip-box">
+                <strong>4. 현금 준비:</strong> 많은 작은 식당과 상점이 현금만 받습니다.
+            </div>
+            <div class="tip-box">
+                <strong>5. 예의:</strong> 사원과 신사 방문 시 조용히 존중하며 촬영 규칙을 지켜주세요.
+            </div>
+            <div class="tip-box">
+                <strong>6. 계절별 포인트:</strong> 봄(벚꽃), 가을(단풍), 여름(청록), 겨울(설경) 모두 아름답습니다.
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+
