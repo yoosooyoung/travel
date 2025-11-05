@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>최슬기를 위한 교토 여행 가이드 - 완벽한 3일 일정</title>
+    <title>최슬기를 위한 삿포로 여행 가이드 - 여유로운 4일 일정</title>
     <style>
         * {
             margin: 0;
@@ -14,9 +14,8 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #ff6b6b 0%, #ffa500 50%, #ff6b9d 100%);
-            background-attachment: fixed;
+            color: #2c3e50;
+            background: #f5f7fa;
             min-height: 100vh;
         }
 
@@ -29,96 +28,63 @@
         header {
             text-align: center;
             color: white;
-            padding: 80px 20px;
-            background: linear-gradient(135deg, rgba(255,107,107,0.6) 0%, rgba(255,165,0,0.6) 50%, rgba(255,107,157,0.6) 100%), url('main.jpg') center 30% / cover;
-            border-radius: 25px;
-            margin-bottom: 50px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            padding: 100px 20px;
+            background: linear-gradient(135deg, rgba(44,62,80,0.85) 0%, rgba(52,73,94,0.85) 100%), url('main.jpg') center 30% / cover;
+            border-radius: 0;
+            margin-bottom: 60px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             position: relative;
             overflow: hidden;
-            background-attachment: fixed;
         }
         
         @media (max-width: 768px) {
             header {
-                background: linear-gradient(135deg, rgba(255,107,107,0.6) 0%, rgba(255,165,0,0.6) 50%, rgba(255,107,157,0.6) 100%), url('main.jpg') center 25% / cover;
-                background-attachment: scroll;
+                padding: 60px 20px;
+                background: linear-gradient(135deg, rgba(44,62,80,0.85) 0%, rgba(52,73,94,0.85) 100%), url('main.jpg') center 25% / cover;
             }
         }
 
-        header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: repeating-linear-gradient(
-                45deg,
-                transparent,
-                transparent 10px,
-                rgba(255,255,255,0.05) 10px,
-                rgba(255,255,255,0.05) 20px
-            );
-            animation: slide 20s linear infinite;
-        }
-
-        @keyframes slide {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
-        }
-
         header h1 {
-            font-size: 3.8em;
-            margin-bottom: 15px;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
-            position: relative;
-            z-index: 1;
-            font-weight: 700;
-            letter-spacing: 2px;
-        }
-
-        header p {
-            font-size: 1.4em;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
             position: relative;
             z-index: 1;
             font-weight: 300;
+            letter-spacing: 4px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 1;
+            font-weight: 300;
+            opacity: 0.95;
         }
 
         .section {
-            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-            border-radius: 20px;
-            padding: 45px;
-            margin-bottom: 35px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-            border: 2px solid rgba(255,107,107,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border: 1px solid #e1e8ed;
         }
 
         .section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 45px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
         }
 
         .section h2 {
-            color: #ff6b6b;
-            font-size: 2.6em;
-            margin-bottom: 35px;
-            border-bottom: 4px solid #ffa500;
-            padding-bottom: 20px;
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 15px;
             position: relative;
-            font-weight: 700;
-        }
-
-        .section h2::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 100px;
-            height: 4px;
-            background: linear-gradient(90deg, #ff6b6b, #ffa500);
+            font-weight: 400;
+            letter-spacing: 1px;
         }
 
         .section h3 {
@@ -134,42 +100,26 @@
         }
 
         .time-block {
-            background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
-            padding: 28px;
-            border-radius: 15px;
-            border-left: 6px solid #ff6b6b;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .time-block::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .time-block:hover::before {
-            left: 100%;
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 6px;
+            border-left: 4px solid #3498db;
+            transition: all 0.2s ease;
+            margin-bottom: 15px;
         }
 
         .time-block:hover {
-            transform: translateX(12px);
-            box-shadow: 0 8px 20px rgba(255,107,107,0.3);
-            border-left-color: #ffa500;
+            background: #ecf0f1;
+            border-left-color: #2980b9;
+            transform: translateX(3px);
         }
 
         .time {
-            font-weight: bold;
-            color: #ff6b6b;
-            font-size: 1.4em;
-            margin-bottom: 12px;
-            text-shadow: 1px 1px 2px rgba(255,107,107,0.2);
+            font-weight: 600;
+            color: #3498db;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
         }
 
         .activity {
@@ -185,43 +135,34 @@
         }
 
         .transport-info {
-            background: linear-gradient(135deg, #fff8e1 0%, #ffe0b2 100%);
-            padding: 25px;
-            border-radius: 15px;
-            margin: 20px 0;
-            border-left: 6px solid #ffa500;
-            box-shadow: 0 5px 15px rgba(255,165,0,0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .transport-info:hover {
-            transform: translateX(5px);
+            background: #fff9e6;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 15px 0;
+            border-left: 4px solid #f39c12;
         }
 
         .transport-info strong {
-            color: #ff6b00;
+            color: #d68910;
         }
 
         .restaurant {
-            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
-            padding: 28px;
-            border-radius: 15px;
-            margin: 25px 0;
-            border-left: 6px solid #ff6b9d;
-            box-shadow: 0 5px 15px rgba(255,107,157,0.2);
-            transition: transform 0.3s ease;
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 6px;
+            margin: 20px 0;
+            border-left: 4px solid #e74c3c;
         }
 
         .restaurant:hover {
-            transform: translateX(5px);
-            box-shadow: 0 8px 20px rgba(255,107,157,0.3);
+            background: #ecf0f1;
         }
 
         .restaurant h4 {
-            color: #ff6b9d;
-            font-size: 1.6em;
-            margin-bottom: 12px;
-            font-weight: 700;
+            color: #c0392b;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            font-weight: 500;
         }
 
         .restaurant-info {
@@ -243,26 +184,26 @@
         .gallery-item {
             position: relative;
             overflow: hidden;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             height: 250px;
-            transition: transform 0.3s ease;
+            transition: transform 0.2s ease;
         }
 
         .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
         .gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s ease;
+            transition: transform 0.3s ease;
         }
 
         .gallery-item:hover img {
-            transform: scale(1.15);
+            transform: scale(1.05);
         }
 
         .gallery-caption {
@@ -278,33 +219,60 @@
 
         .day-badge {
             display: inline-block;
-            background: linear-gradient(135deg, #ff6b6b 0%, #ffa500 100%);
+            background: #3498db;
             color: white;
-            padding: 10px 25px;
-            border-radius: 25px;
-            font-size: 1.2em;
-            margin-bottom: 25px;
-            font-weight: 700;
-            box-shadow: 0 5px 15px rgba(255,107,107,0.4);
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
         .tip-box {
-            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-            border-left: 6px solid #2196f3;
-            padding: 25px;
-            border-radius: 15px;
-            margin: 25px 0;
-            box-shadow: 0 5px 15px rgba(33,150,243,0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .tip-box:hover {
-            transform: translateX(5px);
+            background: #ebf5fb;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
         }
 
         .tip-box strong {
-            color: #1976d2;
+            color: #2980b9;
+        }
+
+        /* 눈 내리는 효과 */
+        .snow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            overflow: hidden;
+        }
+
+        .snowflake {
+            position: absolute;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-shadow: 0 0 8px rgba(255,255,255,0.9);
+            animation: snowfall linear infinite;
+            opacity: 0.9;
+            user-select: none;
+        }
+
+        @keyframes snowfall {
+            0% {
+                transform: translateY(-100px) translateX(0) rotate(0deg);
+                opacity: 0.9;
+            }
+            100% {
+                transform: translateY(100vh) translateX(150px) rotate(360deg);
+                opacity: 0.2;
+            }
         }
 
         @media (max-width: 768px) {
@@ -325,78 +293,82 @@
 <body>
     <div class="container">
         <header>
-            <h1>🌸 최슬기를 위한 교토 여행 가이드 🌸</h1>
-            <p>전통과 현대가 만나는 아름다운 도시에서의 특별한 3일</p>
+            <h1>❄️ 최슬기를 위한 삿포로 여행 가이드 ❄️</h1>
+            <p>신선한 해산물과 아름다운 자연이 있는 홋카이도에서의 여유로운 4일</p>
         </header>
 
         <!-- 교통수단 안내 -->
         <section class="section">
             <h2>🚌 교통수단 안내</h2>
             <div class="transport-info">
-                <strong>오사카에서 교토로 이동:</strong>
+                <strong>도쿄/오사카에서 삿포로로 이동:</strong>
                 <ul style="margin: 10px 0 0 20px;">
-                    <li><strong>JR 도카이도 신칸센:</strong> 오사카역 → 교토역 (약 15분, 1,420엔)</li>
-                    <li><strong>JR 특급 열차:</strong> 오사카역 → 교토역 (약 30분, 560엔) - 가장 경제적</li>
-                    <li><strong>한큐 전철:</strong> 우메다역 → 가와라마치역 (약 45분, 400엔)</li>
+                    <li><strong>비행기:</strong> 하네다공항/간사이공항 → 삿포로공항(신치토세공항) (약 1.5-2시간, 15,000-30,000엔) - 가장 빠름</li>
+                    <li><strong>JR 슈퍼카무이 호:</strong> 도쿄역 → 삿포로역 (약 8시간, 14,000엔) - 침대열차로 여유롭게</li>
+                    <li><strong>JR 도호쿠 신칸센 + 특급:</strong> 도쿄역 → 삿포로역 (약 8시간, 연속이용권 추천)</li>
                 </ul>
             </div>
             <div class="transport-info">
-                <strong>교토 시내 이동:</strong>
+                <strong>삿포로 시내 이동:</strong>
                 <ul style="margin: 10px 0 0 20px;">
-                    <li><strong>교토 버스 일일권:</strong> 600엔 (하루 무제한 버스 이용 가능, 추천!)</li>
-                    <li><strong>교토 지하철 + 버스 일일권:</strong> 900엔</li>
-                    <li><strong>교토 시영 버스:</strong> 1회 230엔</li>
-                    <li><strong>택시:</strong> 초기 요금 660엔 (2km), 이후 410엔/km</li>
+                    <li><strong>삿포로 지하철 일일권:</strong> 520엔 (하루 무제한 지하철 이용, 추천!)</li>
+                    <li><strong>삿포로 관광 루프 버스:</strong> 1,000엔 (주요 관광지 순환)</li>
+                    <li><strong>삿포로 시영 지하철:</strong> 1회 200-360엔 (거리별)</li>
+                    <li><strong>택시:</strong> 초기 요금 640엔 (1.5km), 이후 80엔/280m</li>
+                </ul>
+            </div>
+            <div class="transport-info">
+                <strong>삿포로 근교 이동:</strong>
+                <ul style="margin: 10px 0 0 20px;">
+                    <li><strong>오타루:</strong> JR 하코다테 본선 삿포로역 → 오타루역 (약 30분, 750엔)</li>
+                    <li><strong>노보리베츠 온천:</strong> JR 삿포로역 → 노보리베츠역 (약 1.5시간, 4,000엔)</li>
+                    <li><strong>시코츠호 국립공원:</strong> 삿포로역 → 지토세역 (약 1시간, 1,000엔) → 버스</li>
                 </ul>
             </div>
             <div class="tip-box">
-                <strong>💡 팁:</strong> 교토 버스 일일권을 구매하시면 시내 주요 관광지를 모두 편리하게 다닐 수 있습니다. 교토역이나 지하철역, 주요 호텔에서 구매 가능합니다.
+                <strong>💡 팁:</strong> 삿포로는 겨울에 매우 춥습니다! 따뜻한 옷과 방수 장화를 준비하세요. 여름에는 시원하고 쾌적하니 피서지로 좋습니다. 홋카이도 JR 패스가 있으면 편리합니다!
             </div>
         </section>
 
         <!-- 1일차 일정 -->
         <section class="section">
             <span class="day-badge">1일차</span>
-            <h2>전통 문화 체험의 날</h2>
+            <h2>삿포로 도착 & 시내 둘러보기</h2>
             <div class="timetable">
                 <div class="time-block">
-                    <div class="time">09:00 - 10:00</div>
-                    <div class="activity">🍜 아침 식사: 키요미즈데라 근처 카페</div>
-                    <div class="activity-details">교토역에서 시내버스 206번 타고 키요미즈고조까지 (약 20분)</div>
+                    <div class="time">10:00 - 11:00</div>
+                    <div class="activity">✈️ 삿포로공항(신치토세공항) 도착 & 호텔 체크인</div>
+                    <div class="activity-details">삿포로공항에서 삿포로역까지 리무진 버스 또는 전철 (약 1시간) | 호텔에 짐 두고 여유롭게 준비</div>
                 </div>
                 <div class="time-block">
-                    <div class="time">10:00 - 11:30</div>
-                    <div class="activity">⛩ 키요미즈데라 (清水寺) 방문</div>
-                    <div class="activity-details">입장료: 400엔 | 세계문화유산, 벚꽃과 단풍 명소</div>
+                    <div class="time">11:00 - 12:30</div>
+                    <div class="activity">🍜 점심: 삿포로 라멘 거리</div>
+                    <div class="activity-details">라멘 요코초에서 삿포로 라멘 체험 | 미소라멘, 시오라멘 등 다양한 맛 (1,000-1,500엔)</div>
                 </div>
                 <div class="time-block">
-                    <div class="time">11:30 - 13:00</div>
-                    <div class="activity">👘 기모노 렌탈 & 사진 촬영</div>
-                    <div class="activity-details">키요미즈데라 근처 기모노 대여점에서 기모노 착용 (3,000-8,000엔) | 산넨자카 거리에서 사진 촬영</div>
-                </div>
-                <div class="time-block">
-                    <div class="time">13:00 - 14:30</div>
-                    <div class="activity">🍽 점심: 산넨자카/니넨자카 거리 산책 및 식사</div>
-                    <div class="activity-details">전통 기와집 거리, 각종 기념품 쇼핑, 기모노 입은 상태로 산책</div>
+                    <div class="time">12:30 - 14:30</div>
+                    <div class="activity">🏛 오도리 공원 & 삿포로 시청</div>
+                    <div class="activity-details">무료 | 오도리 공원에서 눈 축제 준비 모습 구경 | 1월에는 눈 조각이 조금씩 보이기 시작</div>
                 </div>
                 <div class="time-block">
                     <div class="time">14:30 - 16:00</div>
-                    <div class="activity">🎨 전통 공예 체험: 교토 부채 만들기</div>
-                    <div class="activity-details">기온마치 근처 공예 체험관 | 손으로 직접 그리는 전통 부채 만들기 (2,000-3,500엔) | 기념품으로 가져가기</div>
+                    <div class="activity">🛍 쇼핑: 타이마츠 & 스스키노 거리</div>
+                    <div class="activity-details">삿포로 중심가 쇼핑 | 겨울 옷 구매 (필요시) | 홋카이도 특산품 쇼핑</div>
                 </div>
                 <div class="time-block">
                     <div class="time">16:00 - 17:30</div>
-                    <div class="activity">🛍 니시키 마켓 (錦市場) 투어</div>
-                    <div class="activity-details">"교토의 부엌" 니시키 마켓에서 길거리 음식 체험 | 타코야키, 생선회, 교토 식재료 쇼핑</div>
+                    <div class="activity">☕️ 카페에서 따뜻하게 쉬기</div>
+                    <div class="activity-details">삿포로 유명 카페에서 따뜻한 음료와 디저트 | 여유롭게 일정 점검</div>
                 </div>
                 <div class="time-block">
-                    <div class="time">17:30 - 19:00</div>
-                    <div class="activity">🍱 저녁: 기온마치 근처 레스토랑</div>
+                    <div class="time">17:30 - 19:30</div>
+                    <div class="activity">🍱 저녁: 제누아가타 (成吉思汗) 체험</div>
+                    <div class="activity-details">홋카이도 전통 양고기 구이 | 따뜻한 실내에서 맛있는 저녁 (2,000-4,000엔)</div>
                 </div>
                 <div class="time-block">
-                    <div class="time">19:00 - 20:30</div>
-                    <div class="activity">🎭 교토 전통 공연 관람 (기온마치 카부키자)</div>
-                    <div class="activity-details">전통 일본 공연 예술 체험 (선택사항, 3,000-5,000엔) | 또는 기온마치 거리 야경 산책</div>
+                    <div class="time">19:30 - 21:00</div>
+                    <div class="activity">🌃 삿포로 타워 야경 & 저녁 산책</div>
+                    <div class="activity-details">삿포로 타워 전망대 (700엔) 또는 야경 산책 | 눈 내리는 삿포로의 야경 감상</div>
                 </div>
             </div>
         </section>
@@ -404,50 +376,46 @@
         <!-- 2일차 일정 -->
         <section class="section">
             <span class="day-badge">2일차</span>
-            <h2>아라시야마 액티비티와 자연 탐험</h2>
+            <h2>오타루 일 Trip & 겨울 체험</h2>
             <div class="timetable">
                 <div class="time-block">
-                    <div class="time">08:30 - 09:30</div>
-                    <div class="activity">🍳 아침: 호텔 근처 조식</div>
+                    <div class="time">09:00 - 10:00</div>
+                    <div class="activity">🍳 아침: 호텔 조식</div>
                 </div>
                 <div class="time-block">
-                    <div class="time">09:30 - 11:00</div>
-                    <div class="activity">🏛 금각사 (金閣寺) 방문</div>
-                    <div class="activity-details">버스 205번 또는 지하철 카미오지역에서 버스 | 입장료: 400엔 | 교토의 대표 사원</div>
+                    <div class="time">10:00 - 10:40</div>
+                    <div class="activity">🚂 삿포로 → 오타루 이동</div>
+                    <div class="activity-details">JR 하코다테 본선 삿포로역 → 오타루역 (약 40분, 750엔) | 창가에서 눈 내리는 바다 경치 감상</div>
                 </div>
                 <div class="time-block">
-                    <div class="time">11:00 - 13:00</div>
-                    <div class="activity">🍜 점심: 아라시야마로 이동하며 식사</div>
-                    <div class="activity-details">JR 산인본선 사가아라시야마역 또는 한큐 아라시야마역 (약 20분)</div>
+                    <div class="time">10:40 - 12:30</div>
+                    <div class="activity">🏛 오타루 운하 산책 & 카페</div>
+                    <div class="activity-details">오타루 운하 거리 산책 | 겨울 운하의 아름다운 풍경 | 카페에서 따뜻한 음료 마시며 휴식</div>
                 </div>
                 <div class="time-block">
-                    <div class="time">13:00 - 14:30</div>
-                    <div class="activity">🎋 아라시야마 대나무 숲 산책 & 사진 촬영</div>
-                    <div class="activity-details">무료 | 사진 촬영 명소, 평화로운 분위기</div>
+                    <div class="time">12:30 - 14:00</div>
+                    <div class="activity">🍱 점심: 오타루 해산물</div>
+                    <div class="activity-details">오타루 유명 해산물 레스토랑 | 신선한 회, 게, 성게 등 (2,500-5,000엔)</div>
                 </div>
                 <div class="time-block">
-                    <div class="time">14:30 - 16:00</div>
-                    <div class="activity">🚴 아라시야마 사이클링 투어</div>
-                    <div class="activity-details">자전거 대여 (1,000-1,500엔/일) | 아라시야마 주변 카무강 따라 자전거 타기 | 벚꽃/단풍 시즌 특별 아름다움</div>
+                    <div class="time">14:00 - 16:00</div>
+                    <div class="activity">🛍 오타루 쇼핑 거리</div>
+                    <div class="activity-details">유리공예 상점, 뮤직 박스, 기념품 쇼핑 | 오타루 특산품 구매</div>
                 </div>
                 <div class="time-block">
-                    <div class="time">16:00 - 17:30</div>
-                    <div class="activity">🍵 전통 다과 체험: 마치야 카페</div>
-                    <div class="activity-details">아라시야마 근처 전통 다과집에서 와가시(일본 전통 과자)와 녹차 체험 (1,500-2,500엔) | 전통 마치야 건축 감상</div>
+                    <div class="time">16:00 - 17:00</div>
+                    <div class="activity">❄️ 오타루 유리공예 체험</div>
+                    <div class="activity-details">유리공예 체험관에서 직접 유리 만들기 (2,000-3,500엔) | 작품은 택배로 배송 가능</div>
                 </div>
                 <div class="time-block">
-                    <div class="time">17:30 - 19:00</div>
-                    <div class="activity">🛍 아라시야마 거리 쇼핑 & 기념품 구매</div>
-                    <div class="activity-details">전통 기념품, 지역 특산품, 교토 부채, 향초 등 구매</div>
+                    <div class="time">17:00 - 18:00</div>
+                    <div class="activity">🚂 오타루 → 삿포로 복귀</div>
+                    <div class="activity-details">오타루역 → 삿포로역 (약 40분) | 호텔로 돌아가 여유롭게 휴식</div>
                 </div>
                 <div class="time-block">
-                    <div class="time">19:00 - 20:30</div>
-                    <div class="activity">🍱 저녁: 아라시야마 근처 레스토랑</div>
-                </div>
-                <div class="time-block">
-                    <div class="time">20:30 - 22:00</div>
-                    <div class="activity">🌙 후시미이나리 신사 야경 투어</div>
-                    <div class="activity-details">야간 토리이 산책 (무료) | 조명이 켜진 토리이가 특별한 분위기 연출 | 사진 촬영 명소</div>
+                    <div class="time">18:00 - 20:00</div>
+                    <div class="activity">🍱 저녁: 삿포로 시내</div>
+                    <div class="activity-details">삿포로역 근처 레스토랑에서 저녁 | 여유롭게 하루를 마무리</div>
                 </div>
             </div>
         </section>
@@ -455,168 +423,290 @@
         <!-- 3일차 일정 -->
         <section class="section">
             <span class="day-badge">3일차</span>
-            <h2>체험과 쇼핑의 날</h2>
+            <h2>스키/스노보드 또는 온천 체험</h2>
             <div class="timetable">
                 <div class="time-block">
-                    <div class="time">09:00 - 10:00</div>
-                    <div class="activity">🍳 아침: 교토역 근처 조식</div>
+                    <div class="time">08:00 - 09:00</div>
+                    <div class="activity">🍳 아침: 호텔 조식</div>
                 </div>
                 <div class="time-block">
-                    <div class="time">10:00 - 12:00</div>
-                    <div class="activity">🎌 닌자 체험관 방문</div>
-                    <div class="activity-details">교토역 근처 닌자 체험관 | 닌자 복장 입고 사진 촬영, 닌자 무기 체험, 닌자 역사 배우기 (2,000-3,000엔)</div>
+                    <div class="time">09:00 - 10:30</div>
+                    <div class="activity">⛷ 선택 1: 스키/스노보드 체험</div>
+                    <div class="activity-details">삿포로 근처 스키장 (테이네, 키로로 등) | 리프트권 + 장비 대여 (6,000-10,000엔) | 초보자도 즐길 수 있는 레슨 가능</div>
                 </div>
                 <div class="time-block">
-                    <div class="time">12:00 - 13:30</div>
-                    <div class="activity">🍜 점심: 교토역 이스타 지하 식당가</div>
-                    <div class="activity-details">다양한 일본 요리 선택 가능</div>
+                    <div class="time">09:00 - 10:30</div>
+                    <div class="activity">♨️ 선택 2: 노보리베츠 온천 여행</div>
+                    <div class="activity-details">삿포로역 → 노보리베츠역 (약 1.5시간) | 일본 최대 규모 온천 마을 | 따뜻한 온천에서 휴식</div>
                 </div>
                 <div class="time-block">
-                    <div class="time">13:30 - 15:30</div>
-                    <div class="activity">🛍 쇼핑: 교토역 근처</div>
-                    <div class="activity-details">교토 타워, 이온몰, 기념품 샵 투어 | 교토 특산품 쇼핑 (녹차, 향초, 전통 공예품)</div>
+                    <div class="time">10:30 - 12:30</div>
+                    <div class="activity">❄️ 눈 체험 활동</div>
+                    <div class="activity-details">스키장: 스키/스노보드 타기 | 온천: 온천 목욕 & 마을 산책 | 여유롭게 즐기기</div>
                 </div>
                 <div class="time-block">
-                    <div class="time">15:30 - 17:00</div>
-                    <div class="activity">🍶 사케 테이스팅 & 체험</div>
-                    <div class="activity-details">교토역 근처 사케 미술관 또는 사케 양조장 투어 | 다양한 사케 시음 (2,000-3,500엔) | 사케 구매</div>
+                    <div class="time">12:30 - 14:00</div>
+                    <div class="activity">🍜 점심: 현지 식당</div>
+                    <div class="activity-details">스키장: 스키장 내 식당에서 따뜻한 우동이나 라멘 | 온천: 온천 마을 전통 요리</div>
                 </div>
                 <div class="time-block">
-                    <div class="time">17:00 - 18:30</div>
-                    <div class="activity">🎨 전통 공예 만들기 체험: 교토 도자기 그리기</div>
-                    <div class="activity-details">교토 도자기 체험관에서 직접 도자기에 그림 그리기 (2,500-4,000엔) | 작품은 택배로 배송 가능</div>
+                    <div class="time">14:00 - 16:00</div>
+                    <div class="activity">🛷 겨울 액티비티 계속</div>
+                    <div class="activity-details">스키/스노보드 계속 타기 또는 눈썰매 타기 | 온천 마을 더 둘러보기</div>
                 </div>
                 <div class="time-block">
-                    <div class="time">18:30 - 20:00</div>
-                    <div class="activity">🍱 저녁: 교토역 근처 레스토랑</div>
+                    <div class="time">16:00 - 18:00</div>
+                    <div class="activity">🚂 삿포로 복귀</div>
+                    <div class="activity-details">스키장/온천 → 삿포로역 | 호텔로 돌아가 휴식</div>
+                </div>
+                <div class="time-block">
+                    <div class="time">18:00 - 20:00</div>
+                    <div class="activity">🍱 저녁: 삿포로 시내</div>
+                    <div class="activity-details">신선한 해산물 또는 홋카이도 요리 | 여유롭게 저녁 식사</div>
                 </div>
                 <div class="time-block">
                     <div class="time">20:00 - 21:30</div>
-                    <div class="activity">🎤 카라오케 또는 교토 나이트 라이프</div>
-                    <div class="activity-details">일본식 카라오케 체험 (1,500-3,000엔/시간) | 또는 교토역 근처 바에서 마지막 한 잔</div>
+                    <div class="activity">🍺 삿포로 맥주원 또는 나이트 라이프</div>
+                    <div class="activity-details">삿포로 맥주원에서 맥주 시음 (선택사항) | 또는 카페에서 따뜻하게 마무리</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4일차 일정 -->
+        <section class="section">
+            <span class="day-badge">4일차</span>
+            <h2>마지막 쇼핑 & 출발</h2>
+            <div class="timetable">
+                <div class="time-block">
+                    <div class="time">09:00 - 10:00</div>
+                    <div class="activity">🍳 아침: 호텔 조식 또는 삿포로 시장</div>
+                    <div class="activity-details">삿포로 조정공원 근처 시장에서 신선한 해산물 아침식사 | 회덮밥 추천!</div>
+                </div>
+                <div class="time-block">
+                    <div class="time">10:00 - 12:00</div>
+                    <div class="activity">🛍 최종 쇼핑: 홋카이도 특산품</div>
+                    <div class="activity-details">로이스, 도나키 등 특산품 매장 | 화이트 러버스, 로이스 초콜릿, 홋카이도 과자 등</div>
+                </div>
+                <div class="time-block">
+                    <div class="time">12:00 - 13:30</div>
+                    <div class="activity">🍜 점심: 마지막 삿포로 라멘</div>
+                    <div class="activity-details">삿포로 라멘 거리에서 가장 맛있었던 곳 다시 방문 또는 새로운 곳 탐방</div>
+                </div>
+                <div class="time-block">
+                    <div class="time">13:30 - 15:00</div>
+                    <div class="activity">☕️ 카페에서 여유롭게 휴식</div>
+                    <div class="activity-details">마지막으로 삿포로의 따뜻한 분위기 즐기기 | 짐 정리 및 여행 일정 정리</div>
+                </div>
+                <div class="time-block">
+                    <div class="time">15:00 - 16:00</div>
+                    <div class="activity">🏨 호텔 체크아웃</div>
+                    <div class="activity-details">짐 정리 후 호텔 체크아웃 | 공항으로 이동 준비</div>
+                </div>
+                <div class="time-block">
+                    <div class="time">16:00 - 17:00</div>
+                    <div class="activity">✈️ 공항 이동</div>
+                    <div class="activity-details">삿포로역 → 삿포로공항(신치토세공항) (리무진 버스 또는 전철, 약 1시간)</div>
+                </div>
+                <div class="time-block">
+                    <div class="time">17:00 - 출발까지</div>
+                    <div class="activity">🛫 공항에서 최종 쇼핑 & 출발</div>
+                    <div class="activity-details">공항 면세점에서 마지막 쇼핑 | 편안하게 출발 준비</div>
                 </div>
             </div>
         </section>
 
         <!-- 맛집 추천 -->
         <section class="section">
-            <h2>🍽 교토 맛집 추천</h2>
+            <h2>🍽 삿포로 맛집 추천</h2>
             
             <div class="restaurant">
-                <h4>1. 키요미즈데라 근처 - 오카부 (おかぶ)</h4>
+                <h4>1. 라멘 요코초 (ラーメン横丁) - 라멘 거리</h4>
                 <div class="restaurant-info">
-                    <strong>📍 위치:</strong> 키요미즈고조 근처<br>
-                    <strong>🍜 추천 메뉴:</strong> 유바덴부 (유부 튀김), 전통 교토식 정식<br>
-                    <strong>💰 가격:</strong> 1,500-3,000엔<br>
-                    <strong>⭐ 특징:</strong> 전통 교토 요리, 현지인들에게 인기
+                    <strong>📍 위치:</strong> 삿포로시 주오구 스스키노 5-3<br>
+                    <strong>🍜 추천 메뉴:</strong> 미소라멘, 시오라멘, 버터콘라멘<br>
+                    <strong>💰 가격:</strong> 800-1,500엔<br>
+                    <strong>⭐ 특징:</strong> 삿포로 라멘의 성지, 10여 개의 명가 라멘집이 모여있는 골목길 | 스스키노역 도보 5분<br>
+                    <strong>🗺️ 지도:</strong> <a href="https://www.google.com/maps/search/ラーメン横丁+札幌" target="_blank" style="color: #3498db; text-decoration: underline;">구글 지도에서 보기</a>
                 </div>
             </div>
 
             <div class="restaurant">
-                <h4>2. 기온마치 - 요지야 (ようじや)</h4>
+                <h4>2. 제누아가타 다루마 본점 (成吉思汗だるま 本店)</h4>
                 <div class="restaurant-info">
-                    <strong>📍 위치:</strong> 기온마치 한카이역 근처<br>
-                    <strong>🍜 추천 메뉴:</strong> 교토식 우동, 카이세키 요리<br>
+                    <strong>📍 위치:</strong> 삿포로시 미나미구 미나미 5조 니시 4초메 8<br>
+                    <strong>🍜 추천 메뉴:</strong> 양고기 제누아가타, 양고기 볶음밥<br>
+                    <strong>💰 가격:</strong> 2,000-4,000엔<br>
+                    <strong>⭐ 특징:</strong> 홋카이도 전통 양고기 구이의 원조, 1954년 설립 | 나카지마 공원역 도보 10분<br>
+                    <strong>🗺️ 지도:</strong> <a href="https://www.google.com/maps/search/成吉思汗だるま+本店+札幌" target="_blank" style="color: #3498db; text-decoration: underline;">구글 지도에서 보기</a>
+                </div>
+            </div>
+
+            <div class="restaurant">
+                <h4>3. 니조 시장 (二条市場) - 회덮밥</h4>
+                <div class="restaurant-info">
+                    <strong>📍 위치:</strong> 삿포로시 주오구 니조동<br>
+                    <strong>🍜 추천 메뉴:</strong> 회덮밥, 게 요리, 성게회, 바다성게<br>
                     <strong>💰 가격:</strong> 2,000-5,000엔<br>
-                    <strong>⭐ 특징:</strong> 100년 이상의 전통, 정통 교토 요리
+                    <strong>⭐ 특징:</strong> 홋카이도 최대 규모의 해산물 시장, 아침 식사로 유명한 회덮밥 | 오도리역 도보 5분<br>
+                    <strong>🗺️ 지도:</strong> <a href="https://www.google.com/maps/search/二条市場+札幌" target="_blank" style="color: #3498db; text-decoration: underline;">구글 지도에서 보기</a>
                 </div>
             </div>
 
             <div class="restaurant">
-                <h4>3. 아라시야마 - 아라시야마 요시무라 (嵐山 よしむら)</h4>
+                <h4>4. 삿포로 라멘 산쿄 (札幌ラーメン 三光)</h4>
                 <div class="restaurant-info">
-                    <strong>📍 위치:</strong> 아라시야마 대나무 숲 근처<br>
-                    <strong>🍜 추천 메뉴:</strong> 유부 우동, 교토식 정식<br>
-                    <strong>💰 가격:</strong> 1,800-3,500엔<br>
-                    <strong>⭐ 특징:</strong> 아라시야마 전망 좋은 레스토랑
+                    <strong>📍 위치:</strong> 삿포로시 주오구 미나미 1조 니시 4초메<br>
+                    <strong>🍜 추천 메뉴:</strong> 미소라멘, 버터콘라멘<br>
+                    <strong>💰 가격:</strong> 900-1,200엔<br>
+                    <strong>⭐ 특징:</strong> 삿포로 라멘의 대표 명가, 미소라멘의 원조 | 오도리역 도보 3분<br>
+                    <strong>🗺️ 지도:</strong> <a href="https://www.google.com/maps/search/札幌ラーメン+三光" target="_blank" style="color: #3498db; text-decoration: underline;">구글 지도에서 보기</a>
                 </div>
             </div>
 
             <div class="restaurant">
-                <h4>4. 교토역 - 이치란 (一蘭) 라멘</h4>
+                <h4>5. 오타루 운하 카나무라 (小樽運河 かなむら)</h4>
                 <div class="restaurant-info">
-                    <strong>📍 위치:</strong> 교토역 근처<br>
+                    <strong>📍 위치:</strong> 오타루시 이나다 1-2-20<br>
+                    <strong>🍜 추천 메뉴:</strong> 신선한 회, 게 요리, 성게, 활어회<br>
+                    <strong>💰 가격:</strong> 2,500-6,000엔<br>
+                    <strong>⭐ 특징:</strong> 오타루 운하 근처 해산물 전문점, 겨울에도 신선한 해산물 제공 | 오타루역 도보 10분<br>
+                    <strong>🗺️ 지도:</strong> <a href="https://www.google.com/maps/search/かなむら+小樽" target="_blank" style="color: #3498db; text-decoration: underline;">구글 지도에서 보기</a>
+                </div>
+            </div>
+
+            <div class="restaurant">
+                <h4>6. 삿포로 맥주원 (サッポロビール園)</h4>
+                <div class="restaurant-info">
+                    <strong>📍 위치:</strong> 삿포로시 시로이시구 고엔 7조 니시 6초메<br>
+                    <strong>🍜 추천 메뉴:</strong> 삿포로 맥주, 제누아가타, 킹크랩, 홋카이도 요리<br>
+                    <strong>💰 가격:</strong> 2,500-5,000엔<br>
+                    <strong>⭐ 특징:</strong> 삿포로 맥주의 본고장, 홋카이도 요리와 맥주를 함께 즐길 수 있는 명소 | 시로이시역 도보 10분<br>
+                    <strong>🗺️ 지도:</strong> <a href="https://www.google.com/maps/search/サッポロビール園" target="_blank" style="color: #3498db; text-decoration: underline;">구글 지도에서 보기</a>
+                </div>
+            </div>
+
+            <div class="restaurant">
+                <h4>7. 이치란 (一蘭) 라멘</h4>
+                <div class="restaurant-info">
+                    <strong>📍 위치:</strong> 삿포로역 근처, 삿포로시 주오구 기타 5조 니시 3초메<br>
                     <strong>🍜 추천 메뉴:</strong> 돈코츠 라멘<br>
                     <strong>💰 가격:</strong> 890-1,290엔<br>
-                    <strong>⭐ 특징:</strong> 유명 체인점, 24시간 영업
+                    <strong>⭐ 특징:</strong> 유명 라멘 체인점, 24시간 영업, 추운 날 따뜻한 라멘 | 삿포로역 도보 3분<br>
+                    <strong>🗺️ 지도:</strong> <a href="https://www.google.com/maps/search/一蘭+札幌" target="_blank" style="color: #3498db; text-decoration: underline;">구글 지도에서 보기</a>
                 </div>
             </div>
 
             <div class="restaurant">
-                <h4>5. 기온마치 - 니시키 마켓 (錦市場)</h4>
+                <h4>8. 키쿠노이 (きくのい) - 회덮밥</h4>
                 <div class="restaurant-info">
-                    <strong>📍 위치:</strong> 기온마치 근처<br>
-                    <strong>🍜 추천 메뉴:</strong> 각종 스트리트 푸드, 타코야키, 생선회<br>
-                    <strong>💰 가격:</strong> 500-2,000엔<br>
-                    <strong>⭐ 특징:</strong> 교토의 부엌, 다양한 일본 길거리 음식
-                </div>
-            </div>
-
-            <div class="restaurant">
-                <h4>6. 교토역 - 교토 라멘 키오쿠 (京都らーめん きをく)</h4>
-                <div class="restaurant-info">
-                    <strong>📍 위치:</strong> 교토역 근처<br>
-                    <strong>🍜 추천 메뉴:</strong> 교토식 라멘, 교자<br>
-                    <strong>💰 가격:</strong> 900-1,500엔<br>
-                    <strong>⭐ 특징:</strong> 현지인들이 추천하는 맛집
+                    <strong>📍 위치:</strong> 삿포로시 주오구 니조 시장 내<br>
+                    <strong>🍜 추천 메뉴:</strong> 회덮밥, 게 회덮밥, 바다성게 덮밥<br>
+                    <strong>💰 가격:</strong> 2,000-4,000엔<br>
+                    <strong>⭐ 특징:</strong> 니조 시장에서 가장 유명한 회덮밥 전문점, 아침 식사로 인기 | 오도리역 도보 5분<br>
+                    <strong>🗺️ 지도:</strong> <a href="https://www.google.com/maps/search/きくのい+札幌" target="_blank" style="color: #3498db; text-decoration: underline;">구글 지도에서 보기</a>
                 </div>
             </div>
         </section>
 
-        <!-- 교토 사진 갤러리 -->
+        <!-- 삿포로 사진 갤러리 -->
         <section class="section">
-            <h2>📸 교토 사진 갤러리</h2>
+            <h2>📸 삿포로 사진 갤러리</h2>
             <div class="gallery">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80" alt="키요미즈데라">
-                    <div class="gallery-caption">키요미즈데라</div>
+                    <img src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="삿포로 눈 축제" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80';">
+                    <div class="gallery-caption">삿포로 눈 축제</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1551782450-17144efb9c50?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="후시미이나리 신사" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1493804714600-bb0e0c8b2b50?w=800&q=80';">
-                    <div class="gallery-caption">후시미이나리 신사 토리이</div>
+                    <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="오타루 운하" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80';">
+                    <div class="gallery-caption">오타루 운하 겨울 풍경</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1494500764479-0c8f2919a3d8?w=800&q=80" alt="금각사">
-                    <div class="gallery-caption">금각사</div>
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="삿포로 시내" onerror="this.src='https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=800&q=80';">
+                    <div class="gallery-caption">삿포로 시내 겨울 풍경</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="아라시야마 대나무 숲">
-                    <div class="gallery-caption">아라시야마 대나무 숲</div>
+                    <img src="https://images.unsplash.com/photo-1512428813834-c702c7702b78?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="삿포로 스키장" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80';">
+                    <div class="gallery-caption">삿포로 스키장</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1518152006812-edab29b069ac?w=800&q=80" alt="기온마치">
-                    <div class="gallery-caption">기온마치 거리</div>
+                    <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="노보리베츠 온천" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80';">
+                    <div class="gallery-caption">노보리베츠 온천</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80" alt="교토 전통 거리">
-                    <div class="gallery-caption">산넨자카 거리</div>
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="삿포로 야경" onerror="this.src='https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=800&q=80';">
+                    <div class="gallery-caption">삿포로 겨울 야경</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="삿포로 타워" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80';">
+                    <div class="gallery-caption">삿포로 타워</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="오도리 공원" onerror="this.src='https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=800&q=80';">
+                    <div class="gallery-caption">오도리 공원 겨울</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1512428813834-c702c7702b78?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="삿포로 라멘" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80';">
+                    <div class="gallery-caption">삿포로 라멘 거리</div>
                 </div>
             </div>
         </section>
 
         <!-- 추가 팁 -->
         <section class="section">
-            <h2>💡 교토 여행 필수 팁</h2>
+            <h2>💡 삿포로 1월 여행 필수 팁</h2>
             <div class="tip-box">
-                <strong>1. 교토 버스 일일권 활용:</strong> 시내 주요 관광지를 모두 다닐 수 있어 가장 경제적입니다.
+                <strong>1. 방한 준비:</strong> 1월 삿포로는 평균 기온 -5~-10도로 매우 춥습니다. 패딩, 목도리, 장갑, 방한화 필수!
             </div>
             <div class="tip-box">
-                <strong>2. 조기 출발:</strong> 인기 관광지는 오전에 방문하면 혼잡을 피할 수 있습니다.
+                <strong>2. 삿포로 지하철 일일권:</strong> 시내 주요 관광지를 모두 다닐 수 있어 가장 경제적입니다. 520엔으로 하루 무제한 이용 가능.
             </div>
             <div class="tip-box">
-                <strong>3. 편한 신발:</strong> 많은 사원과 신사가 언덕에 있어 편한 신발이 필수입니다.
+                <strong>3. 눈 축제:</strong> 1월 말부터 눈 축제 준비가 시작되며, 2월 초 삿포로 눈 축제가 열립니다. 미리 일정 확인!
             </div>
             <div class="tip-box">
-                <strong>4. 현금 준비:</strong> 많은 작은 식당과 상점이 현금만 받습니다.
+                <strong>4. 현금 준비:</strong> 많은 작은 식당과 상점이 현금만 받습니다. 특히 시장이나 작은 가게는 현금 필수.
             </div>
             <div class="tip-box">
-                <strong>5. 예의:</strong> 사원과 신사 방문 시 조용히 존중하며 촬영 규칙을 지켜주세요.
+                <strong>5. 따뜻한 음식:</strong> 라멘, 제누아가타, 따뜻한 우동 등이 추운 날씨에 딱입니다. 카페에서 따뜻한 음료도 추천!
             </div>
             <div class="tip-box">
-                <strong>6. 계절별 포인트:</strong> 봄(벚꽃), 가을(단풍), 여름(청록), 겨울(설경) 모두 아름답습니다.
+                <strong>6. 눈길 주의:</strong> 눈길은 미끄러우니 신발을 잘 선택하고, 이동 시 여유있게 움직이세요.
             </div>
         </section>
     </div>
+
+    <!-- 눈 내리는 효과 -->
+    <div class="snow" id="snow"></div>
+
+    <script>
+        // 눈 내리는 효과 생성 - 더 많이 생성
+        function createSnowflake() {
+            const snow = document.getElementById('snow');
+            const snowflake = document.createElement('div');
+            snowflake.className = 'snowflake';
+            snowflake.innerHTML = '❄';
+            snowflake.style.left = Math.random() * 100 + '%';
+            snowflake.style.animationDuration = (Math.random() * 4 + 3) + 's';
+            snowflake.style.animationDelay = Math.random() * 1 + 's';
+            snowflake.style.fontSize = (Math.random() * 15 + 12) + 'px';
+            snowflake.style.opacity = Math.random() * 0.5 + 0.5;
+            snow.appendChild(snowflake);
+
+            setTimeout(() => {
+                if (snowflake.parentNode) {
+                    snowflake.remove();
+                }
+            }, 7000);
+        }
+
+        // 눈송이 생성 간격 - 더 자주 생성
+        setInterval(createSnowflake, 150);
+        
+        // 페이지 로드 시 초기 눈송이 생성
+        for (let i = 0; i < 50; i++) {
+            setTimeout(() => createSnowflake(), i * 100);
+        }
+    </script>
 </body>
 </html>
 
