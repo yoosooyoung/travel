@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>교토 여행 가이드 - 완벽한 3일 일정</title>
+    <title>최슬기를 위한 교토 여행 가이드 - 완벽한 3일 일정</title>
     <style>
         * {
             margin: 0;
@@ -15,7 +15,9 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #ff6b6b 0%, #ffa500 50%, #ff6b9d 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
         }
 
         .container {
@@ -27,37 +29,96 @@
         header {
             text-align: center;
             color: white;
-            padding: 60px 20px;
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1200&q=80') center/cover;
-            border-radius: 15px;
-            margin-bottom: 40px;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, rgba(255,107,107,0.6) 0%, rgba(255,165,0,0.6) 50%, rgba(255,107,157,0.6) 100%), url('main.jpg') center 30% / cover;
+            border-radius: 25px;
+            margin-bottom: 50px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+            background-attachment: fixed;
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                background: linear-gradient(135deg, rgba(255,107,107,0.6) 0%, rgba(255,165,0,0.6) 50%, rgba(255,107,157,0.6) 100%), url('main.jpg') center 25% / cover;
+                background-attachment: scroll;
+            }
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255,255,255,0.05) 10px,
+                rgba(255,255,255,0.05) 20px
+            );
+            animation: slide 20s linear infinite;
+        }
+
+        @keyframes slide {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
         }
 
         header h1 {
-            font-size: 3.5em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-size: 3.8em;
+            margin-bottom: 15px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
+            position: relative;
+            z-index: 1;
+            font-weight: 700;
+            letter-spacing: 2px;
         }
 
         header p {
-            font-size: 1.3em;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            font-size: 1.4em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+            position: relative;
+            z-index: 1;
+            font-weight: 300;
         }
 
         .section {
-            background: white;
-            border-radius: 15px;
-            padding: 40px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border-radius: 20px;
+            padding: 45px;
+            margin-bottom: 35px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            border: 2px solid rgba(255,107,107,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 45px rgba(0,0,0,0.2);
         }
 
         .section h2 {
-            color: #667eea;
-            font-size: 2.5em;
-            margin-bottom: 30px;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 15px;
+            color: #ff6b6b;
+            font-size: 2.6em;
+            margin-bottom: 35px;
+            border-bottom: 4px solid #ffa500;
+            padding-bottom: 20px;
+            position: relative;
+            font-weight: 700;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6b6b, #ffa500);
         }
 
         .section h3 {
@@ -73,23 +134,42 @@
         }
 
         .time-block {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 25px;
-            border-radius: 10px;
-            border-left: 5px solid #667eea;
-            transition: transform 0.3s ease;
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
+            padding: 28px;
+            border-radius: 15px;
+            border-left: 6px solid #ff6b6b;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .time-block::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .time-block:hover::before {
+            left: 100%;
         }
 
         .time-block:hover {
-            transform: translateX(10px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transform: translateX(12px);
+            box-shadow: 0 8px 20px rgba(255,107,107,0.3);
+            border-left-color: #ffa500;
         }
 
         .time {
             font-weight: bold;
-            color: #667eea;
-            font-size: 1.3em;
-            margin-bottom: 10px;
+            color: #ff6b6b;
+            font-size: 1.4em;
+            margin-bottom: 12px;
+            text-shadow: 1px 1px 2px rgba(255,107,107,0.2);
         }
 
         .activity {
@@ -105,29 +185,43 @@
         }
 
         .transport-info {
-            background: #fff3cd;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 15px 0;
-            border-left: 5px solid #ffc107;
+            background: linear-gradient(135deg, #fff8e1 0%, #ffe0b2 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border-left: 6px solid #ffa500;
+            box-shadow: 0 5px 15px rgba(255,165,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .transport-info:hover {
+            transform: translateX(5px);
         }
 
         .transport-info strong {
-            color: #856404;
+            color: #ff6b00;
         }
 
         .restaurant {
-            background: #f8f9fa;
-            padding: 25px;
-            border-radius: 10px;
-            margin: 20px 0;
-            border-left: 5px solid #dc3545;
+            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
+            padding: 28px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border-left: 6px solid #ff6b9d;
+            box-shadow: 0 5px 15px rgba(255,107,157,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .restaurant:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 20px rgba(255,107,157,0.3);
         }
 
         .restaurant h4 {
-            color: #dc3545;
-            font-size: 1.5em;
-            margin-bottom: 10px;
+            color: #ff6b9d;
+            font-size: 1.6em;
+            margin-bottom: 12px;
+            font-weight: 700;
         }
 
         .restaurant-info {
@@ -149,20 +243,26 @@
         .gallery-item {
             position: relative;
             overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
             height: 250px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.3);
         }
 
         .gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.3s ease;
+            transition: transform 0.5s ease;
         }
 
         .gallery-item:hover img {
-            transform: scale(1.1);
+            transform: scale(1.15);
         }
 
         .gallery-caption {
@@ -178,24 +278,33 @@
 
         .day-badge {
             display: inline-block;
-            background: #667eea;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ffa500 100%);
             color: white;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 1.1em;
-            margin-bottom: 20px;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-size: 1.2em;
+            margin-bottom: 25px;
+            font-weight: 700;
+            box-shadow: 0 5px 15px rgba(255,107,107,0.4);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
         }
 
         .tip-box {
-            background: #d1ecf1;
-            border-left: 5px solid #0c5460;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-left: 6px solid #2196f3;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            box-shadow: 0 5px 15px rgba(33,150,243,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .tip-box:hover {
+            transform: translateX(5px);
         }
 
         .tip-box strong {
-            color: #0c5460;
+            color: #1976d2;
         }
 
         @media (max-width: 768px) {
@@ -216,8 +325,8 @@
 <body>
     <div class="container">
         <header>
-            <h1>🌸 교토 여행 가이드 🌸</h1>
-            <p>전통과 현대가 만나는 아름다운 도시</p>
+            <h1>🌸 최슬기를 위한 교토 여행 가이드 🌸</h1>
+            <p>전통과 현대가 만나는 아름다운 도시에서의 특별한 3일</p>
         </header>
 
         <!-- 교통수단 안내 -->
@@ -256,33 +365,38 @@
                     <div class="activity-details">교토역에서 시내버스 206번 타고 키요미즈고조까지 (약 20분)</div>
                 </div>
                 <div class="time-block">
-                    <div class="time">10:00 - 12:00</div>
+                    <div class="time">10:00 - 11:30</div>
                     <div class="activity">⛩ 키요미즈데라 (清水寺) 방문</div>
                     <div class="activity-details">입장료: 400엔 | 세계문화유산, 벚꽃과 단풍 명소</div>
                 </div>
                 <div class="time-block">
-                    <div class="time">12:00 - 13:30</div>
+                    <div class="time">11:30 - 13:00</div>
+                    <div class="activity">👘 기모노 렌탈 & 사진 촬영</div>
+                    <div class="activity-details">키요미즈데라 근처 기모노 대여점에서 기모노 착용 (3,000-8,000엔) | 산넨자카 거리에서 사진 촬영</div>
+                </div>
+                <div class="time-block">
+                    <div class="time">13:00 - 14:30</div>
                     <div class="activity">🍽 점심: 산넨자카/니넨자카 거리 산책 및 식사</div>
-                    <div class="activity-details">전통 기와집 거리, 각종 기념품 쇼핑</div>
+                    <div class="activity-details">전통 기와집 거리, 각종 기념품 쇼핑, 기모노 입은 상태로 산책</div>
                 </div>
                 <div class="time-block">
-                    <div class="time">13:30 - 15:30</div>
-                    <div class="activity">🏯 후시미이나리 신사 (伏見稲荷大社) 방문</div>
-                    <div class="activity-details">버스로 이동 후 JR 나라선 타고 이나리역까지 (약 15분) | 무료 입장, 만개의 빨간 토리이</div>
+                    <div class="time">14:30 - 16:00</div>
+                    <div class="activity">🎨 전통 공예 체험: 교토 부채 만들기</div>
+                    <div class="activity-details">기온마치 근처 공예 체험관 | 손으로 직접 그리는 전통 부채 만들기 (2,000-3,500엔) | 기념품으로 가져가기</div>
                 </div>
                 <div class="time-block">
-                    <div class="time">15:30 - 17:00</div>
-                    <div class="activity">🛍 기온마치 (祇園) 거리 산책</div>
-                    <div class="activity-details">전통 마이코 분위기, 전통 건축물 감상</div>
+                    <div class="time">16:00 - 17:30</div>
+                    <div class="activity">🛍 니시키 마켓 (錦市場) 투어</div>
+                    <div class="activity-details">"교토의 부엌" 니시키 마켓에서 길거리 음식 체험 | 타코야키, 생선회, 교토 식재료 쇼핑</div>
                 </div>
                 <div class="time-block">
-                    <div class="time">17:00 - 18:30</div>
+                    <div class="time">17:30 - 19:00</div>
                     <div class="activity">🍱 저녁: 기온마치 근처 레스토랑</div>
                 </div>
                 <div class="time-block">
-                    <div class="time">18:30 - 20:00</div>
-                    <div class="activity">🌙 야경: 기온마치 야사카 신사 야경</div>
-                    <div class="activity-details">야간 조명으로 아름다운 전통 건축물 감상</div>
+                    <div class="time">19:00 - 20:30</div>
+                    <div class="activity">🎭 교토 전통 공연 관람 (기온마치 카부키자)</div>
+                    <div class="activity-details">전통 일본 공연 예술 체험 (선택사항, 3,000-5,000엔) | 또는 기온마치 거리 야경 산책</div>
                 </div>
             </div>
         </section>
@@ -290,7 +404,7 @@
         <!-- 2일차 일정 -->
         <section class="section">
             <span class="day-badge">2일차</span>
-            <h2>금각사와 아라시야마 탐험</h2>
+            <h2>아라시야마 액티비티와 자연 탐험</h2>
             <div class="timetable">
                 <div class="time-block">
                     <div class="time">08:30 - 09:30</div>
@@ -302,33 +416,38 @@
                     <div class="activity-details">버스 205번 또는 지하철 카미오지역에서 버스 | 입장료: 400엔 | 교토의 대표 사원</div>
                 </div>
                 <div class="time-block">
-                    <div class="time">11:00 - 12:00</div>
-                    <div class="activity">🏯 료안지 (龍安寺) 방문</div>
-                    <div class="activity-details">금각사에서 도보 20분 | 입장료: 500엔 | 석정으로 유명한 선사 사원</div>
-                </div>
-                <div class="time-block">
-                    <div class="time">12:00 - 13:30</div>
+                    <div class="time">11:00 - 13:00</div>
                     <div class="activity">🍜 점심: 아라시야마로 이동하며 식사</div>
                     <div class="activity-details">JR 산인본선 사가아라시야마역 또는 한큐 아라시야마역 (약 20분)</div>
                 </div>
                 <div class="time-block">
-                    <div class="time">13:30 - 15:30</div>
-                    <div class="activity">🎋 아라시야마 대나무 숲 산책</div>
+                    <div class="time">13:00 - 14:30</div>
+                    <div class="activity">🎋 아라시야마 대나무 숲 산책 & 사진 촬영</div>
                     <div class="activity-details">무료 | 사진 촬영 명소, 평화로운 분위기</div>
                 </div>
                 <div class="time-block">
-                    <div class="time">15:30 - 17:00</div>
-                    <div class="activity">⛰ 테노류지 (天龍寺) 방문</div>
-                    <div class="activity-details">입장료: 500엔 (정원만) | 아름다운 정원</div>
+                    <div class="time">14:30 - 16:00</div>
+                    <div class="activity">🚴 아라시야마 사이클링 투어</div>
+                    <div class="activity-details">자전거 대여 (1,000-1,500엔/일) | 아라시야마 주변 카무강 따라 자전거 타기 | 벚꽃/단풍 시즌 특별 아름다움</div>
                 </div>
                 <div class="time-block">
-                    <div class="time">17:00 - 18:30</div>
-                    <div class="activity">🛍 아라시야마 거리 쇼핑</div>
-                    <div class="activity-details">전통 기념품, 지역 특산품 구매</div>
+                    <div class="time">16:00 - 17:30</div>
+                    <div class="activity">🍵 전통 다과 체험: 마치야 카페</div>
+                    <div class="activity-details">아라시야마 근처 전통 다과집에서 와가시(일본 전통 과자)와 녹차 체험 (1,500-2,500엔) | 전통 마치야 건축 감상</div>
                 </div>
                 <div class="time-block">
-                    <div class="time">18:30 - 20:00</div>
+                    <div class="time">17:30 - 19:00</div>
+                    <div class="activity">🛍 아라시야마 거리 쇼핑 & 기념품 구매</div>
+                    <div class="activity-details">전통 기념품, 지역 특산품, 교토 부채, 향초 등 구매</div>
+                </div>
+                <div class="time-block">
+                    <div class="time">19:00 - 20:30</div>
                     <div class="activity">🍱 저녁: 아라시야마 근처 레스토랑</div>
+                </div>
+                <div class="time-block">
+                    <div class="time">20:30 - 22:00</div>
+                    <div class="activity">🌙 후시미이나리 신사 야경 투어</div>
+                    <div class="activity-details">야간 토리이 산책 (무료) | 조명이 켜진 토리이가 특별한 분위기 연출 | 사진 촬영 명소</div>
                 </div>
             </div>
         </section>
@@ -336,7 +455,7 @@
         <!-- 3일차 일정 -->
         <section class="section">
             <span class="day-badge">3일차</span>
-            <h2>교토역 근처와 쇼핑</h2>
+            <h2>체험과 쇼핑의 날</h2>
             <div class="timetable">
                 <div class="time-block">
                     <div class="time">09:00 - 10:00</div>
@@ -344,8 +463,8 @@
                 </div>
                 <div class="time-block">
                     <div class="time">10:00 - 12:00</div>
-                    <div class="activity">🏯 도지 (東寺) 방문</div>
-                    <div class="activity-details">교토역에서 도보 15분 | 입장료: 500엔 | 교토 최고의 오층탑</div>
+                    <div class="activity">🎌 닌자 체험관 방문</div>
+                    <div class="activity-details">교토역 근처 닌자 체험관 | 닌자 복장 입고 사진 촬영, 닌자 무기 체험, 닌자 역사 배우기 (2,000-3,000엔)</div>
                 </div>
                 <div class="time-block">
                     <div class="time">12:00 - 13:30</div>
@@ -353,22 +472,28 @@
                     <div class="activity-details">다양한 일본 요리 선택 가능</div>
                 </div>
                 <div class="time-block">
-                    <div class="time">13:30 - 16:00</div>
+                    <div class="time">13:30 - 15:30</div>
                     <div class="activity">🛍 쇼핑: 교토역 근처</div>
-                    <div class="activity-details">교토 타워, 이온몰, 기념품 샵 투어</div>
+                    <div class="activity-details">교토 타워, 이온몰, 기념품 샵 투어 | 교토 특산품 쇼핑 (녹차, 향초, 전통 공예품)</div>
                 </div>
                 <div class="time-block">
-                    <div class="time">16:00 - 17:30</div>
-                    <div class="activity">🍵 전통 차 체험 (선택사항)</div>
-                    <div class="activity-details">다도 체험 또는 녹차 디저트</div>
+                    <div class="time">15:30 - 17:00</div>
+                    <div class="activity">🍶 사케 테이스팅 & 체험</div>
+                    <div class="activity-details">교토역 근처 사케 미술관 또는 사케 양조장 투어 | 다양한 사케 시음 (2,000-3,500엔) | 사케 구매</div>
                 </div>
                 <div class="time-block">
-                    <div class="time">17:30 - 19:00</div>
+                    <div class="time">17:00 - 18:30</div>
+                    <div class="activity">🎨 전통 공예 만들기 체험: 교토 도자기 그리기</div>
+                    <div class="activity-details">교토 도자기 체험관에서 직접 도자기에 그림 그리기 (2,500-4,000엔) | 작품은 택배로 배송 가능</div>
+                </div>
+                <div class="time-block">
+                    <div class="time">18:30 - 20:00</div>
                     <div class="activity">🍱 저녁: 교토역 근처 레스토랑</div>
                 </div>
                 <div class="time-block">
-                    <div class="time">19:00 - 20:00</div>
-                    <div class="activity">🌃 교토역 야경 및 출발 준비</div>
+                    <div class="time">20:00 - 21:30</div>
+                    <div class="activity">🎤 카라오케 또는 교토 나이트 라이프</div>
+                    <div class="activity-details">일본식 카라오케 체험 (1,500-3,000엔/시간) | 또는 교토역 근처 바에서 마지막 한 잔</div>
                 </div>
             </div>
         </section>
