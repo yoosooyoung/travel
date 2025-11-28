@@ -187,16 +187,101 @@
         }
 
         @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            header {
+                padding: 25px 20px;
+            }
+
             header h1 {
                 font-size: 2em;
             }
 
+            header p {
+                font-size: 1em;
+            }
+
             .stats {
                 grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .stat-card {
+                padding: 20px;
+            }
+
+            .stat-card h3 {
+                font-size: 2em;
             }
 
             .section {
-                padding: 20px;
+                padding: 20px 15px;
+            }
+
+            .section h2 {
+                font-size: 1.5em;
+            }
+
+            .booking-item {
+                padding: 15px;
+            }
+
+            .booking-item h3 {
+                font-size: 1.1em;
+            }
+
+            .booking-item p {
+                font-size: 0.9em;
+                margin: 4px 0;
+            }
+
+            .btn {
+                padding: 12px 18px;
+                font-size: 0.9em;
+                margin-top: 10px;
+                width: 100%;
+            }
+
+            .form-group input,
+            .form-group select {
+                font-size: 16px; /* iOS 줌 방지 */
+                padding: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+
+            header {
+                padding: 20px 15px;
+            }
+
+            header h1 {
+                font-size: 1.6em;
+            }
+
+            .stat-card h3 {
+                font-size: 1.8em;
+            }
+
+            .section {
+                padding: 15px 12px;
+            }
+
+            .section h2 {
+                font-size: 1.3em;
+            }
+
+            .booking-item {
+                padding: 12px;
+            }
+
+            .booking-item h3 {
+                font-size: 1em;
             }
         }
     </style>

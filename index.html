@@ -3,7 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>밍좌공주 house - 예약 시스템</title>
+    <title>밍좌공주's house 예약시스템</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-domain.com/">
+    <meta property="og:title" content="밍좌공주's house 예약시스템">
+    <meta property="og:description" content="편안하고 아늑한 공간에서 특별한 시간을 보내세요. 남양주 다산역 근처 프리미엄 숙소 예약">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1200&q=80">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://your-domain.com/">
+    <meta property="twitter:title" content="밍좌공주's house 예약시스템">
+    <meta property="twitter:description" content="편안하고 아늑한 공간에서 특별한 시간을 보내세요. 남양주 다산역 근처 프리미엄 숙소 예약">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1200&q=80">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Noto+Serif+KR:wght@300;400;600&display=swap" rel="stylesheet">
@@ -30,101 +45,71 @@
 
         header {
             text-align: center;
-            padding: 120px 20px 100px;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e8ba3 100%);
+            padding: 100px 20px 80px;
+            background: #ffffff;
             position: relative;
             overflow: hidden;
-            border-bottom: none;
+            border-bottom: 1px solid #e9ecef;
         }
 
         header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
-            background-size: 50px 50px;
-            animation: movePattern 20s linear infinite;
-        }
-
-        @keyframes movePattern {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
-        }
-
-        header::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.05) 50%, transparent 100%);
+            display: none;
         }
 
         header h1 {
-            font-size: 5em;
-            margin-bottom: 20px;
-            font-weight: 600;
-            letter-spacing: 6px;
-            color: #ffffff;
+            font-size: 4.5em;
+            margin-bottom: 25px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #2c3e50;
             position: relative;
             z-index: 1;
-            animation: slideIn 1s ease-out;
-            font-family: 'Noto Serif KR', 'Playfair Display', serif;
+            animation: fadeInUp 0.8s ease-out;
         }
 
         header h1 .title-main {
-            display: block;
+            display: inline-block;
             font-size: 1em;
-            font-weight: 600;
-            letter-spacing: 10px;
-            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 3px;
             position: relative;
-            font-family: 'Noto Serif KR', serif;
+            padding: 0 20px;
         }
 
         header h1 .title-main::before,
         header h1 .title-main::after {
-            content: '◆';
+            content: '';
             position: absolute;
             top: 50%;
+            width: 30px;
+            height: 2px;
+            background: #667eea;
             transform: translateY(-50%);
-            font-size: 0.3em;
-            color: rgba(255,255,255,0.6);
-            animation: sparkle 2s ease-in-out infinite;
         }
 
         header h1 .title-main::before {
-            left: -40px;
+            left: -10px;
         }
 
         header h1 .title-main::after {
-            right: -40px;
-        }
-
-        @keyframes sparkle {
-            0%, 100% { opacity: 0.3; transform: translateY(-50%) scale(1); }
-            50% { opacity: 1; transform: translateY(-50%) scale(1.2); }
+            right: -10px;
         }
 
         header h1 .title-sub {
             display: block;
-            font-size: 0.35em;
+            font-size: 0.4em;
             font-weight: 300;
-            letter-spacing: 6px;
-            color: rgba(255,255,255,0.9);
-            margin-top: 15px;
+            letter-spacing: 8px;
+            color: #6c757d;
+            margin-top: 12px;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            text-transform: lowercase;
+            text-transform: uppercase;
         }
 
-        @keyframes slideIn {
+        @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(-50px);
+                transform: translateY(30px);
             }
             to {
                 opacity: 1;
@@ -134,13 +119,13 @@
 
         header p {
             font-size: 1.1em;
-            color: rgba(255,255,255,0.85);
+            color: #6c757d;
             font-weight: 300;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             position: relative;
             z-index: 1;
             animation: fadeIn 1s ease-out 0.5s both;
-            margin-top: 30px;
+            margin-top: 20px;
         }
 
         @keyframes fadeIn {
@@ -471,6 +456,29 @@
             border-color: #2c3e50;
         }
 
+        .date-range-inputs {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .date-range-inputs input {
+            flex: 1;
+        }
+
+        .date-arrow {
+            color: #6c757d;
+            font-size: 1.2em;
+            flex-shrink: 0;
+        }
+
+        .date-hint {
+            margin-top: 8px;
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+
         .submit-btn {
             width: 100%;
             padding: 18px;
@@ -556,120 +564,168 @@
         }
 
         @media (max-width: 768px) {
+            .container {
+                padding: 0 10px;
+            }
+
             header {
-                padding: 70px 15px 50px;
+                padding: 60px 15px 40px;
             }
 
             header h1 {
-                font-size: 3em;
+                font-size: 2.8em;
             }
 
             header h1 .title-main {
-                letter-spacing: 6px;
-                font-size: 1em;
+                letter-spacing: 2px;
+                padding: 0 15px;
             }
 
             header h1 .title-main::before,
             header h1 .title-main::after {
-                display: none;
+                width: 20px;
             }
 
             header h1 .title-sub {
-                font-size: 0.4em;
+                font-size: 0.45em;
                 letter-spacing: 4px;
             }
 
             header p {
-                font-size: 1.1em;
+                font-size: 1em;
                 letter-spacing: 1px;
+            }
+
+            .hero-section {
+                margin: 30px 0;
+                border-radius: 15px;
             }
 
             .hero-gallery {
                 grid-template-columns: 1fr;
-                height: 300px;
+                height: 250px;
             }
 
             .section {
-                padding: 30px 15px;
-                margin: 30px 0;
+                padding: 25px 15px;
+                margin: 25px 0;
+                border-radius: 15px;
             }
 
             .section h2 {
-                font-size: 1.6em;
+                font-size: 1.5em;
                 margin-bottom: 20px;
             }
 
             .info-box {
-                padding: 20px;
-                margin: 20px 0;
+                padding: 18px;
+                margin: 15px 0;
             }
 
             .info-box h3 {
-                font-size: 1.2em;
+                font-size: 1.1em;
+                margin-bottom: 10px;
             }
 
             .info-box p {
-                font-size: 0.95em;
+                font-size: 0.9em;
+                line-height: 1.6;
             }
 
             .calendar-section {
-                padding: 30px 15px;
+                padding: 20px 10px;
+            }
+
+            .calendar-container {
+                max-width: 100%;
             }
 
             .calendar-header {
-                flex-direction: column;
-                gap: 15px;
-                padding: 15px;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 10px;
+                padding: 12px;
             }
 
             .calendar-nav {
-                padding: 8px 15px;
-                font-size: 0.9em;
+                padding: 10px 15px;
+                font-size: 0.85em;
+                min-width: 70px;
             }
 
             .calendar-month {
-                font-size: 1.2em;
+                font-size: 1.1em;
+                flex: 1;
+                text-align: center;
             }
 
             .calendar-grid {
-                gap: 5px;
+                gap: 4px;
             }
 
             .calendar-day-header {
-                padding: 10px 5px;
-                font-size: 0.8em;
+                padding: 8px 2px;
+                font-size: 0.75em;
             }
 
             .calendar-day {
-                font-size: 0.85em;
-                padding: 5px;
+                font-size: 0.8em;
+                padding: 4px;
+                min-height: 35px;
+            }
+
+            .calendar-day.unavailable::before,
+            .calendar-day.unavailable::after {
+                font-size: 0.5em;
             }
 
             .booking-form {
-                padding: 25px 15px;
+                padding: 20px 15px;
+            }
+
+            .form-group {
+                margin-bottom: 20px;
             }
 
             .form-group label {
-                font-size: 1em;
+                font-size: 0.95em;
+                margin-bottom: 8px;
             }
 
             .form-group input {
-                padding: 12px;
-                font-size: 0.95em;
+                padding: 14px;
+                font-size: 16px; /* iOS 줌 방지 */
+                border-radius: 8px;
+            }
+
+            .date-range-inputs {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .date-arrow {
+                transform: rotate(90deg);
+                font-size: 1.5em;
+            }
+
+            .date-hint {
+                font-size: 0.85em;
+                text-align: center;
             }
 
             .submit-btn {
-                padding: 15px;
+                padding: 16px;
                 font-size: 1.1em;
+                min-height: 50px; /* 터치 친화적 */
             }
 
             .gallery {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
+                gap: 10px;
             }
 
             .gallery-item {
-                height: 200px;
+                height: 180px;
             }
 
             .location-info {
@@ -677,48 +733,108 @@
             }
 
             .location-info h3 {
-                font-size: 1.4em;
+                font-size: 1.3em;
             }
 
             .location-info p {
-                font-size: 0.95em;
+                font-size: 0.9em;
+                line-height: 1.7;
             }
 
             .kakao-link {
-                padding: 12px 25px;
-                font-size: 1em;
+                padding: 14px 20px;
+                font-size: 0.95em;
                 width: 100%;
                 text-align: center;
+                display: block;
             }
 
             .admin-link {
                 bottom: 15px;
                 right: 15px;
-                padding: 10px 15px;
-                font-size: 0.8em;
+                padding: 12px 18px;
+                font-size: 0.85em;
             }
         }
 
         @media (max-width: 480px) {
+            header {
+                padding: 50px 10px 30px;
+            }
+
             header h1 {
                 font-size: 2.2em;
             }
 
             header h1 .title-main {
-                letter-spacing: 4px;
+                letter-spacing: 1px;
+                padding: 0 10px;
+            }
+
+            header h1 .title-main::before,
+            header h1 .title-main::after {
+                width: 15px;
             }
 
             header h1 .title-sub {
-                font-size: 0.45em;
+                font-size: 0.5em;
                 letter-spacing: 3px;
             }
 
+            header p {
+                font-size: 0.9em;
+            }
+
+            .hero-gallery {
+                height: 200px;
+            }
+
+            .section {
+                padding: 20px 12px;
+                margin: 20px 0;
+            }
+
+            .section h2 {
+                font-size: 1.3em;
+            }
+
+            .calendar-header {
+                flex-direction: column;
+            }
+
+            .calendar-nav {
+                width: 100%;
+            }
+
+            .calendar-month {
+                width: 100%;
+            }
+
             .calendar-day {
-                font-size: 0.75em;
+                font-size: 0.7em;
+                min-height: 32px;
+            }
+
+            .calendar-day-header {
+                font-size: 0.7em;
+                padding: 6px 1px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+                gap: 12px;
             }
 
             .gallery-item {
                 height: 200px;
+            }
+
+            .form-group input {
+                font-size: 16px; /* iOS 줌 방지 */
+            }
+
+            .info-box p {
+                font-size: 0.85em;
             }
         }
     </style>
@@ -757,12 +873,12 @@
                         </div>
                         <div class="form-group">
                             <label>예약 기간</label>
-                            <div style="display: flex; gap: 10px; align-items: center;">
-                                <input type="text" id="startDate" name="startDate" readonly placeholder="체크인 날짜" style="flex: 1;">
-                                <span style="color: #6c757d;">→</span>
-                                <input type="text" id="endDate" name="endDate" readonly placeholder="체크아웃 날짜" style="flex: 1;">
+                            <div class="date-range-inputs">
+                                <input type="text" id="startDate" name="startDate" readonly placeholder="체크인 날짜">
+                                <span class="date-arrow">→</span>
+                                <input type="text" id="endDate" name="endDate" readonly placeholder="체크아웃 날짜">
                             </div>
-                            <p style="margin-top: 10px; font-size: 0.9em; color: #6c757d;">달력에서 시작일과 종료일을 선택해주세요</p>
+                            <p class="date-hint">달력에서 시작일과 종료일을 선택해주세요</p>
                         </div>
                         <button type="submit" class="submit-btn">예약하기</button>
                     </form>
